@@ -50,9 +50,9 @@
     },
     "factionTimeline": [
       {
-        "stageName": "家庭關係・隨諸葛亮",
-        "personName": "諸葛亮",
-        "personId": "zhuge-liang",
+        "stageName": "家庭關係・隨諸葛亮出仕蜀漢",
+        "personName": "劉備",
+        "personId": "liu-bei",
         "actualFactionId": "liubei-group",
         "period": "婚年不詳 — 卒年不詳",
         "periodUncertain": true
