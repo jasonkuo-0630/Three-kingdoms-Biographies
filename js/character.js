@@ -195,7 +195,10 @@ function renderRelatives(list) {
       // 只要文字含「文學」或「虛構」就當非正史來源樣式，其餘（史籍記載、
       // 三國志正文記載、正文及裴注記載…等寫法皆可）都算 record，
       // 不能只完全比對「史籍記載」四個字。
-      const isFictionType = /文學|虛構/.test(r.natureType || "");
+      // 資料性質徽章：只要文字含「文學」「虛構」或「戲曲」就當作非正史來源，
+      // 其餘（史籍記載、三國志正文記載、正文及裴注記載…等寫法皆可）都算 record。
+      // 「戲曲」是為了涵蓋像孫夫人／孫尚香這種源自京劇而非小說的情況。
+      const isFictionType = /文學|虛構|戲曲/.test(r.natureType || "");
       return `
         <tr>
           <td class="person-cell">${personCell}</td>

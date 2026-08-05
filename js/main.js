@@ -16,8 +16,7 @@ function initFactionPills() {
   const container = document.getElementById("faction-pills");
   // 只顯示「目前人物資料裡實際用到」的分類（加上「全部」），
   // 避免一開始就列出一堆還沒有任何人物的空分類
-  const groupsInUse = new Set();
-  state.people.forEach((p) => (p.filterGroups || []).forEach((g) => groupsInUse.add(g)));
+  const groupsInUse = new Set(state.people.map((p) => p.filterGroup).filter(Boolean));
 
   const options = [{ id: "all", label: "全部" }, ...state.filterGroups.filter((g) => groupsInUse.has(g.id))];
 
@@ -65,7 +64,7 @@ function getFilteredPeople() {
   const q = state.query.toLowerCase();
   return state.people.filter((p) => {
     if (!p.published) return false;
-    const matchesGroup = state.group === "all" || (p.filterGroups || []).includes(state.group);
+    const matchesGroup = state.group === "all" || p.filterGroup === state.group;
     if (!matchesGroup) return false;
     if (!q) return true;
     const terms = [p.name, p.courtesyName, ...(p.searchTerms || [])].filter(Boolean);
@@ -89,6 +88,10 @@ function renderCards() {
   const emptyState = document.getElementById("empty-state");
   const resultCount = document.getElementById("result-count");
   const filtered = getFilteredPeople();
+
+  // 依姓名排序（中文用筆畫排序，比預設的字碼順序更符合閱讀直覺）
+  const collator = new Intl.Collator("zh-Hant-u-co-stroke");
+  filtered.sort((a, b) => collator.compare(a.name, b.name));
 
   grid.innerHTML = filtered.map(cardTemplate).join("");
   emptyState.hidden = filtered.length > 0;

@@ -1,20 +1,20 @@
 [
   {
-    "id": "liu-bei",
-    "published": true,
-    "name": "劉備",
-    "courtesyName": "玄德",
-    "searchTerms": ["劉備", "玄德", "liu bei", "先主", "昭烈帝"],
-    "avatar": "images/liu_bei.png",
-    "filterGroups": ["donghan", "qunxiong", "shu"]
-  },
-  {
     "id": "zhao-yun",
     "published": true,
     "name": "趙雲",
     "courtesyName": "子龍",
     "searchTerms": ["趙雲", "子龍", "zhao yun", "zilong"],
     "avatar": "images/zhao_yun.png",
-    "filterGroups": ["qunxiong", "shu"]
+    "filterGroup": "shu"
+  },
+  {
+    "id": "liu-bei",
+    "published": true,
+    "name": "劉備",
+    "courtesyName": "玄德",
+    "searchTerms": ["劉備", "玄德", "liu bei", "先主", "昭烈帝"],
+    "avatar": "images/liu_bei.png",
+    "filterGroup": "shu"
   }
 ]
