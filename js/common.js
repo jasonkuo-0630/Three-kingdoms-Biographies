@@ -21,6 +21,49 @@ async function loadJson(url) {
   return res.json();
 }
 
+/**
+ * 給「變動不頻繁」的共用檔案用（sources.json / factions.json / index.json），
+ * 存進 sessionStorage 快取 5 分鐘，同一個分頁逛第二個人物頁開始就不用重抓。
+ * 5 分鐘過期是刻意設的：如果你剛改完資料要測試，最多等 5 分鐘或開新分頁
+ * 就能看到最新版本，不會被自己的快取卡住。
+ * 絕對不要拿來快取「該人物自己的」JSON——那份內容才是使用者真正要看的，
+ * 快取它會讓人搞不清楚看到的是不是最新資料。
+ */
+const CACHE_TTL_MS = 5 * 60 * 1000;
+
+async function loadJsonCached(url, cacheKey) {
+  try {
+    const raw = sessionStorage.getItem(cacheKey);
+    if (raw) {
+      const { data, ts } = JSON.parse(raw);
+      if (Date.now() - ts < CACHE_TTL_MS) return data;
+    }
+  } catch (err) {
+    // sessionStorage 不可用（例如無痕模式限制）或內容壞掉，直接當快取沒中，往下重抓
+  }
+
+  const data = await loadJson(url);
+
+  try {
+    sessionStorage.setItem(cacheKey, JSON.stringify({ data, ts: Date.now() }));
+  } catch (err) {
+    // 存不進去（例如額度爆了）不影響功能，忽略即可
+  }
+
+  return data;
+}
+
+/** 滑鼠移到人物卡片上時，先在背景把該人物的 JSON 預抓進瀏覽器快取，
+ *  等真的點下去時幾乎是直接讀快取，感覺上更快開啟。
+ *  故意不用 sessionStorage 存資料本身，單純觸發一次 fetch 讓瀏覽器自己快取，
+ *  這樣不會有快取過期要處理的問題。 */
+function prefetchCharacterJson(id) {
+  if (!id) return;
+  fetch(`data/characters/${encodeURIComponent(id)}.json`).catch(() => {
+    // 預抓失敗就算了，使用者真的點下去時會再正常抓一次
+  });
+}
+
 /** 產生 <img> 標籤，並內建載入失敗時自動換成替代圖 */
 function avatarImgHtml(src, alt, className) {
   const safeSrc = src || PLACEHOLDER_AVATAR;
