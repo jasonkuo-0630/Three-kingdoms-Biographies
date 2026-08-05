@@ -18,6 +18,7 @@ const TAB_DEFS = [
 let sourceMap = new Map();
 let personIndexMap = new Map(); // id -> { id, name, avatar, published }
 let actualFactionsMap = new Map(); // id -> { name, description, filterGroup }
+let currentCharacter = null; // 目前這個頁面本人的資料，用來判斷「自我引用」的情況
 
 function getIdFromUrl() {
   const params = new URLSearchParams(window.location.search);
@@ -100,10 +101,22 @@ function demoBadgeLabel(c) {
  */
 function resolvePersonRef(personId, fallbackName, fallbackAvatar, avatarClass) {
   const resolved = resolvePerson(personId);
-  const name = resolved ? resolved.name : fallbackName;
-  const avatar = resolved ? resolved.avatar : fallbackAvatar || null;
-  const avatarHtml = avatarImgHtml(avatar, `${name}的頭像`, avatarClass);
-  return { name, avatarHtml, linkedId: resolved ? resolved.id : null };
+  if (resolved) {
+    const avatarHtml = avatarImgHtml(resolved.avatar, `${resolved.name}的頭像`, avatarClass);
+    return { name: resolved.name, avatarHtml, linkedId: resolved.id };
+  }
+
+  // 沒有 personId（通常是刻意不做自我連結，例如劉備自己執政的階段），
+  // 但如果姓名剛好跟目前這個頁面的主角同名，就直接用他自己的頭像，
+  // 不要落到下面的灰色剪影預設值——不然看起來會像是「還沒建檔的陌生人」，
+  // 但其實這頁本來就是他自己的頁面，頭像明明就在。
+  if (currentCharacter && fallbackName === currentCharacter.name) {
+    const avatarHtml = avatarImgHtml(currentCharacter.avatar, `${fallbackName}的頭像`, avatarClass);
+    return { name: fallbackName, avatarHtml, linkedId: null };
+  }
+
+  const avatarHtml = avatarImgHtml(fallbackAvatar || null, `${fallbackName}的頭像`, avatarClass);
+  return { name: fallbackName, avatarHtml, linkedId: null };
 }
 
 /* ---------- 總覽頁籤 ---------- */
@@ -602,6 +615,7 @@ async function init() {
   sourceMap = buildSourceMap(sources);
   (factions.actualFactions || []).forEach((f) => actualFactionsMap.set(f.id, f));
   people.forEach((p) => personIndexMap.set(p.id, p));
+  currentCharacter = character;
 
   document.title = `${character.name} - 三國人物誌`;
 
