@@ -107,34 +107,64 @@ function resolvePersonRef(personId, fallbackName, fallbackAvatar, avatarClass) {
 
 /* ---------- 總覽頁籤 ---------- */
 
+/** 把連續且同一人物的階段合併成一組，之後渲染成單一卡片、內部用分隔線區隔 */
+function groupFactionStages(entries) {
+  const groups = [];
+  entries.forEach((f) => {
+    const last = groups[groups.length - 1];
+    if (last && last.personName === f.personName) {
+      last.segments.push(f);
+    } else {
+      groups.push({
+        personName: f.personName,
+        personId: f.personId,
+        avatar: f.avatar,
+        hideAvatar: f.hideAvatar,
+        segments: [f],
+      });
+    }
+  });
+  return groups;
+}
+
 function renderFactionTimeline(entries) {
   if (!entries || !entries.length) return "";
-  const items = entries
-    .map((f, i) => {
-      const isContinuation = i > 0 && entries[i - 1].personName === f.personName;
-      const ref = resolvePersonRef(f.personId, f.personName, f.avatar, "faction-stage-avatar");
-      const actualFaction = actualFactionsMap.get(f.actualFactionId);
-      const factionLabel = actualFaction ? actualFaction.name : f.stageName || "";
-      const uncertainFlag = f.periodUncertain
-        ? `<span class="uncertain-flag" title="年代為推定，非確定記載">年代推定</span>`
-        : "";
-      // 連續階段若是同一人物（例如劉備集團 → 蜀漢先主都是劉備），
-      // 第二階段不重複放頭像跟姓名，只用一個空白佔位保持縮排對齊
-      const avatarBlock = isContinuation
-        ? `<span class="avatar-ring avatar-ring--sm avatar-ring--spacer" aria-hidden="true"></span>`
+  const groups = groupFactionStages(entries);
+
+  const items = groups
+    .map((g) => {
+      const ref = resolvePersonRef(g.personId, g.personName, g.avatar, "faction-stage-avatar");
+      const avatarBlock = g.hideAvatar
+        ? "" // 給「東漢朝廷」這種不是具體人物的項目用，整個不畫頭像圈
         : `<span class="avatar-ring avatar-ring--sm">${ref.avatarHtml}</span>`;
-      const personLine = isContinuation ? "" : `<div class="faction-stage-person">${escapeHtml(f.personName)}</div>`;
+
+      // 同一人物若歷經多個階段（例如劉備：劉備集團 → 蜀漢先主），
+      // 合併成同一張卡片，階段之間用一條分隔線隔開，不再拆成好幾張卡片
+      const segmentsHtml = g.segments
+        .map((f, i) => {
+          const actualFaction = actualFactionsMap.get(f.actualFactionId);
+          const factionLabel = actualFaction ? actualFaction.name : f.stageName || "";
+          const uncertainFlag = f.periodUncertain
+            ? `<span class="uncertain-flag" title="年代為推定，非確定記載">年代推定</span>`
+            : "";
+          const dividerClass = i > 0 ? " has-divider" : "";
+          return `
+            <div class="faction-stage-segment${dividerClass}">
+              <div class="faction-stage-faction">${escapeHtml(factionLabel)}</div>
+              <div class="faction-stage-period">${escapeHtml(f.period)}${uncertainFlag}</div>
+            </div>
+          `;
+        })
+        .join("");
+
       const inner = `
         ${avatarBlock}
         <div class="faction-stage-body">
-          ${personLine}
-          <div class="faction-stage-faction">${escapeHtml(factionLabel)}</div>
-          <div class="faction-stage-period">${escapeHtml(f.period)}${uncertainFlag}</div>
-          ${contentBlockHtml(f.description, sourceMap, f.uncertaintyNote)}
+          <div class="faction-stage-person">${escapeHtml(g.personName)}</div>
+          ${segmentsHtml}
         </div>
       `;
-      const extraClass = isContinuation ? "faction-stage faction-stage--continuation" : "faction-stage";
-      return `<li>${personLinkOrPlain(ref.linkedId, inner, extraClass)}</li>`;
+      return `<li>${personLinkOrPlain(ref.linkedId, inner, "faction-stage")}</li>`;
     })
     .join("");
   return `
@@ -186,19 +216,24 @@ function renderRelatives(list) {
   if (!list || !list.length) return "";
   const rows = list
     .map((r) => {
-      const ref = resolvePersonRef(r.personId, r.personName, r.avatar, "rel-avatar");
-      const personCell = personLinkOrPlain(
-        ref.linkedId,
-        `${ref.avatarHtml}<span>${escapeHtml(ref.name)}</span>`,
-        "rel-person-cell"
-      );
-      // 只要文字含「文學」或「虛構」就當非正史來源樣式，其餘（史籍記載、
-      // 三國志正文記載、正文及裴注記載…等寫法皆可）都算 record，
-      // 不能只完全比對「史籍記載」四個字。
-      // 資料性質徽章：只要文字含「文學」「虛構」或「戲曲」就當作非正史來源，
+      // hideAvatar：給不打算建檔、連預設灰色剪影都不想放的親屬用
+      // （例如劉備父母這種只在史書上帶一筆、沒有三國時期事蹟的人物）
+      let personCell;
+      if (r.hideAvatar) {
+        personCell = `<span class="rel-person-cell rel-person-cell--no-avatar">${escapeHtml(r.personName)}</span>`;
+      } else {
+        const ref = resolvePersonRef(r.personId, r.personName, r.avatar, "rel-avatar");
+        personCell = personLinkOrPlain(
+          ref.linkedId,
+          `${ref.avatarHtml}<span>${escapeHtml(ref.name)}</span>`,
+          "rel-person-cell"
+        );
+      }
+      // 資料性質徽章：只要文字含「文學」「虛構」「戲曲」或「傳說」就當作非正史來源，
       // 其餘（史籍記載、三國志正文記載、正文及裴注記載…等寫法皆可）都算 record。
-      // 「戲曲」是為了涵蓋像孫夫人／孫尚香這種源自京劇而非小說的情況。
-      const isFictionType = /文學|虛構|戲曲/.test(r.natureType || "");
+      // 「傳說」是為了涵蓋像黃月英這種連《三國演義》本身都沒用過、
+      // 純粹後世說書／電玩流傳開來的名字。
+      const isFictionType = /文學|虛構|戲曲|傳說/.test(r.natureType || "");
       return `
         <tr>
           <td class="person-cell">${personCell}</td>
