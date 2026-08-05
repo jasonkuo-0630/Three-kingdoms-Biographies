@@ -46,23 +46,7 @@
         "personId": null,
         "actualFactionId": "gongsun-zan-faction",
         "period": "初平年間（約191年前後，年代為推定）— 年代不詳",
-        "periodUncertain": true,
-        "description": {
-          "paragraphs": [
-            {
-              "text": "《三國志》正文僅記載趙雲早年屬於公孫瓚，未記載明確年份；《雲別傳》補充，趙雲由常山郡推舉，率義從吏兵前往投奔公孫瓚，並隨其征討。劉備當時也依附公孫瓚，趙雲由此與劉備建立關係。後來趙雲因兄長去世而請辭返鄉。",
-              "citations": [
-                {
-                  "sourceId": "sgz-zhaoyun-main"
-                },
-                {
-                  "sourceId": "yun-biezhuan"
-                }
-              ]
-            }
-          ]
-        },
-        "uncertaintyNote": "「初平二年（191年）」為部分後世考據依公孫瓚、劉備活動年代推估的年份，《三國志》正文與《雲別傳》均未直接記載趙雲投奔公孫瓚的確切年份，不可呈現為確定年份。"
+        "periodUncertain": true
       },
       {
         "stageName": "劉備集團（蜀漢建立前）",
@@ -70,22 +54,7 @@
         "personId": "liu-bei",
         "actualFactionId": "liubei-group",
         "period": "初平年間曾短暫隨劉備；約建安五年（200年）後長期追隨 — 章武元年（221年）",
-        "periodUncertain": false,
-        "description": {
-          "paragraphs": [
-            {
-              "text": "《雲別傳》記載，劉備依附袁紹期間，趙雲於鄴城與劉備重逢，劉備並與趙雲同床而眠，暗中命趙雲招募數百人、對外只稱是劉備部曲，自此趙雲長期追隨劉備。其後歷經荊州寄寓、當陽長坂救護幼主、留守荊州及隨諸葛亮入蜀等階段，逐漸成為劉備集團的重要將領。",
-              "citations": [
-                {
-                  "sourceId": "yun-biezhuan"
-                },
-                {
-                  "sourceId": "sgz-zhaoyun-main"
-                }
-              ]
-            }
-          ]
-        }
+        "periodUncertain": false
       },
       {
         "stageName": "蜀漢・先主時期",
@@ -93,20 +62,7 @@
         "personId": "liu-bei",
         "actualFactionId": "shuhan-xianzhu",
         "period": "章武元年（221年）— 章武三年（223年）",
-        "periodUncertain": false,
-        "description": {
-          "paragraphs": [
-            {
-              "text": "劉備稱帝建立蜀漢後，趙雲繼續效力於先主政權。《雲別傳》記載，孫權襲取荊州、關羽遇害後，劉備欲東征孫吳，趙雲進諫，主張應以曹魏為主要敵人，先滅魏則吳自服；劉備未採納其意見，留趙雲督守江州。",
-              "citations": [
-                {
-                  "sourceId": "yun-biezhuan"
-                }
-              ]
-            }
-          ]
-        },
-        "uncertaintyNote": "此事只見於《雲別傳》，《三國志》正文未載，不可標成正文記載。"
+        "periodUncertain": false
       },
       {
         "stageName": "蜀漢・後主時期",
@@ -114,19 +70,7 @@
         "personId": null,
         "actualFactionId": "shuhan-houzhu",
         "period": "建興元年（223年）— 建興七年（229年）",
-        "periodUncertain": false,
-        "description": {
-          "paragraphs": [
-            {
-              "text": "劉禪即位後，趙雲任中護軍、征南將軍，封永昌亭侯，後遷鎮東將軍。建興六年，他與鄧芝率偏師出箕谷，兵敗後仍能收攏部眾、固守營壘，退軍後被貶為鎮軍將軍。建興七年去世。這些官職及箕谷主要經過均見於《三國志》正文。",
-              "citations": [
-                {
-                  "sourceId": "sgz-zhaoyun-main"
-                }
-              ]
-            }
-          ]
-        }
+        "periodUncertain": false
       }
     ],
     "relatives": [
