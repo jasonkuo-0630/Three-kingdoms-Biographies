@@ -74,13 +74,30 @@ function getFilteredPeople() {
 
 function cardTemplate(p) {
   return `
-    <a class="char-card" href="character.html?id=${encodeURIComponent(p.id)}" aria-label="查看${escapeHtml(p.name)}的介紹">
+    <a class="char-card" data-id="${escapeHtml(p.id)}" href="character.html?id=${encodeURIComponent(p.id)}" aria-label="查看${escapeHtml(p.name)}的介紹">
       <span class="avatar-ring">
         ${avatarImgHtml(p.avatar, `${p.name}的頭像`, "")}
       </span>
       <span class="char-name">${escapeHtml(p.name)}</span>
     </a>
   `;
+}
+
+function initCardPrefetch() {
+  const grid = document.getElementById("card-grid");
+  const prefetched = new Set();
+  const maybePrefetch = (e) => {
+    const card = e.target.closest(".char-card");
+    if (!card) return;
+    const id = card.dataset.id;
+    if (!id || prefetched.has(id)) return;
+    prefetched.add(id);
+    prefetchCharacterJson(id);
+  };
+  // mouseover：滑鼠移過去先抓；focusin／touchstart：鍵盤操作或觸控裝置也能受益
+  grid.addEventListener("mouseover", maybePrefetch);
+  grid.addEventListener("focusin", maybePrefetch);
+  grid.addEventListener("touchstart", maybePrefetch, { passive: true });
 }
 
 function renderCards() {
@@ -101,7 +118,10 @@ function renderCards() {
 
 async function init() {
   try {
-    const [people, factions] = await Promise.all([loadJson("data/index.json"), loadJson("data/factions.json")]);
+    const [people, factions] = await Promise.all([
+      loadJsonCached("data/index.json", "cache:index"),
+      loadJsonCached("data/factions.json", "cache:factions"),
+    ]);
     state.people = people;
     state.filterGroups = (factions.filterGroups || []).slice().sort((a, b) => (a.order || 0) - (b.order || 0));
   } catch (err) {
@@ -116,6 +136,7 @@ async function init() {
 
   initFactionPills();
   initSearch();
+  initCardPrefetch();
   renderCards();
 }
 
