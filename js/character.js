@@ -264,10 +264,12 @@ function renderRelatives(list) {
 }
 
 function renderEvaluationEntry(e) {
-  const isOriginal = e.textType === "古籍原文" && e.originalText;
-  const textHtml = isOriginal
-    ? `<blockquote class="original-text">${escapeHtml(e.originalText)}</blockquote>`
-    : `<p class="paraphrase-text">${escapeHtml(e.paraphrase || "")}</p>`;
+  // 原文與白話說明可以同時存在（例如「原文是這句，白話意思是……」），
+  // 不能只要有 originalText 就把 paraphrase 整段丟掉。
+  // 也不要求 textType 一定要精確等於「古籍原文」四個字，只要有 originalText
+  // 就當逐字引文處理，容許「後世詩歌原文」之類的變體寫法。
+  const originalHtml = e.originalText ? `<blockquote class="original-text">${escapeHtml(e.originalText)}</blockquote>` : "";
+  const paraphraseHtml = e.paraphrase ? `<p class="paraphrase-text">${escapeHtml(e.paraphrase)}</p>` : "";
   return `
     <div class="quote-card">
       <div class="quote-meta">
@@ -275,7 +277,8 @@ function renderEvaluationEntry(e) {
         ${e.evaluatorEra ? `<span class="quote-era">${escapeHtml(e.evaluatorEra)}</span>` : ""}
       </div>
       ${e.context ? `<p class="quote-context">${escapeHtml(e.context)}</p>` : ""}
-      ${textHtml}
+      ${originalHtml}
+      ${paraphraseHtml}
       ${citationsHtml(e.citations, sourceMap)}
     </div>
   `;
@@ -374,18 +377,49 @@ function romanceTimelineHtml(entries) {
 
 /* ---------- 著作 ---------- */
 
+function workMetaFieldHtml(label, value) {
+  if (!value) return "";
+  return `<div class="work-meta-field"><span class="work-meta-label">${escapeHtml(label)}</span><span class="work-meta-value">${escapeHtml(
+    value
+  )}</span></div>`;
+}
+
+function workFullTextHtml(work) {
+  if (!work.fullText || !work.fullText.length) return "";
+  const paragraphs = work.fullText.map((p) => `<p class="original-text-paragraph">${escapeHtml(p)}</p>`).join("");
+  return `
+    <details class="original-text-toggle">
+      <summary>查看全文</summary>
+      <blockquote class="original-text original-text--full">${paragraphs}</blockquote>
+    </details>
+  `;
+}
+
 function worksTabHtml(works) {
   if (!works || !works.length) return "";
   return works
     .map((w) => {
-      const meta = [w.type, w.extant, w.attribution].filter(Boolean).join(" · ");
+      const metaFields = [
+        workMetaFieldHtml("類型", w.type),
+        workMetaFieldHtml("現存狀況", w.extant),
+        workMetaFieldHtml("歸屬", w.attribution),
+      ]
+        .filter(Boolean)
+        .join("");
       return `
         <div class="work-entry">
           <h3 class="work-title">${escapeHtml(w.title)}</h3>
-          ${meta ? `<div class="work-meta">${escapeHtml(meta)}</div>` : ""}
+          ${metaFields ? `<div class="work-meta-grid">${metaFields}</div>` : ""}
           ${w.summary ? `<p class="paraphrase-text">${escapeHtml(w.summary)}</p>` : ""}
-          ${w.anthology ? `<p class="work-anthology">收錄於：${escapeHtml(w.anthology)}</p>` : ""}
-          ${w.excerpt ? `<blockquote class="original-text">${escapeHtml(w.excerpt)}</blockquote>` : ""}
+          ${w.anthology ? `<div class="work-subsection"><span class="work-subsection-label">收錄文獻</span><p class="work-anthology">${escapeHtml(w.anthology)}</p></div>` : ""}
+          ${
+            w.excerpt
+              ? `<div class="work-subsection"><span class="work-subsection-label">原文摘錄</span><blockquote class="original-text">${escapeHtml(
+                  w.excerpt
+                )}</blockquote></div>`
+              : ""
+          }
+          ${workFullTextHtml(w)}
           ${citationsHtml(w.citations, sourceMap)}
         </div>
       `;
