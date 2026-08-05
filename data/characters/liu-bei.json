@@ -62,20 +62,7 @@
         "actualFactionId": "late-han-local-service",
         "period": "中平元年（184年）前後 — 初平年間",
         "periodUncertain": true,
-        "description": {
-          "paragraphs": [
-            {
-              "text": "劉備招聚部眾，隨校尉鄒靖討黃巾，因功任安喜尉；棄官後又歷任下密丞、高唐尉、高唐令。這一階段仍屬東漢地方軍政體系，尚未形成固定割據政權。",
-              "citations": [
-                {
-                  "sourceId": "sgz-liubei-main",
-                  "locator": "卷三十二・先主傳"
-                }
-              ]
-            }
-          ]
-        },
-        "uncertaintyNote": "討黃巾與任安喜尉可確定見於正文，但各次任官的精確年月未逐一記載；不宜把整段硬定為184年。"
+        "hideAvatar": true
       },
       {
         "stageName": "公孫瓚部",
@@ -83,21 +70,7 @@
         "personId": null,
         "actualFactionId": "gongsun-zan-faction",
         "period": "初平年間 — 約193年",
-        "periodUncertain": true,
-        "description": {
-          "paragraphs": [
-            {
-              "text": "高唐失守後，劉備投奔早年同學公孫瓚，獲表為別部司馬，並與田楷在青州方向對抗袁紹；其後試守平原令、領平原相。",
-              "citations": [
-                {
-                  "sourceId": "sgz-liubei-main",
-                  "locator": "卷三十二・先主傳"
-                }
-              ]
-            }
-          ]
-        },
-        "uncertaintyNote": "《三國志》敘述了先後次序，但未在此段明載投奔公孫瓚的確切年份。"
+        "periodUncertain": true
       },
       {
         "stageName": "陶謙麾下與徐州政權",
@@ -105,20 +78,7 @@
         "personId": null,
         "actualFactionId": "xuzhou-regime",
         "period": "約193年 — 建安元年（196年）",
-        "periodUncertain": false,
-        "description": {
-          "paragraphs": [
-            {
-              "text": "劉備隨田楷救援遭曹操進攻的徐州，之後離開田楷而歸陶謙，獲表為豫州刺史、駐屯小沛。陶謙去世後，麋竺等迎劉備領徐州；劉備起初推辭，經陳登、孔融勸說後接受。",
-              "citations": [
-                {
-                  "sourceId": "sgz-liubei-main",
-                  "locator": "卷三十二・先主傳"
-                }
-              ]
-            }
-          ]
-        }
+        "periodUncertain": false
       },
       {
         "stageName": "徐州失守、轉依呂布與曹操",
@@ -126,20 +86,7 @@
         "personId": null,
         "actualFactionId": "cao-cao-han-court",
         "period": "建安元年（196年）— 建安四年（199年）",
-        "periodUncertain": false,
-        "description": {
-          "paragraphs": [
-            {
-              "text": "呂布乘劉備與袁術交戰時奪取下邳，劉備一度向呂布求和並屯小沛，後又遭呂布攻破，轉投曹操。曹操以漢廷名義授劉備豫州牧、左將軍，並與他共同消滅呂布；劉備則參與董承等人反曹密謀，隨後借出兵攔截袁術之機離開許都。",
-              "citations": [
-                {
-                  "sourceId": "sgz-liubei-main",
-                  "locator": "卷三十二・先主傳"
-                }
-              ]
-            }
-          ]
-        }
+        "periodUncertain": false
       },
       {
         "stageName": "再據徐州、依附袁紹與汝南活動",
@@ -147,20 +94,7 @@
         "personId": null,
         "actualFactionId": "yuan-shao-faction",
         "period": "建安四年至六年（199—201年）",
-        "periodUncertain": false,
-        "description": {
-          "paragraphs": [
-            {
-              "text": "劉備殺徐州刺史車冑、再據徐州，不久被曹操親征擊敗，妻子與部眾被俘，關羽也被擒。劉備北投袁紹，後數次率兵至汝南活動，逐漸尋機離開袁紹，最終在曹操南擊之下轉投劉表。",
-              "citations": [
-                {
-                  "sourceId": "sgz-liubei-main",
-                  "locator": "卷三十二・先主傳"
-                }
-              ]
-            }
-          ]
-        }
+        "periodUncertain": false
       },
       {
         "stageName": "劉表麾下・荊州寄寓",
@@ -168,24 +102,7 @@
         "personId": null,
         "actualFactionId": "liu-biao-faction",
         "period": "約201年 — 建安十三年（208年）",
-        "periodUncertain": false,
-        "description": {
-          "paragraphs": [
-            {
-              "text": "劉表以上賓之禮接待劉備，增其兵力並使屯新野，但也暗中防備他。這段寄寓期間，劉備在博望擊敗夏侯惇等部，又延攬徐庶、諸葛亮；裴松之注引《九州春秋》所載「髀肉復生」之嘆，也發生在這一時期。",
-              "citations": [
-                {
-                  "sourceId": "sgz-liubei-main",
-                  "locator": "卷三十二・先主傳"
-                },
-                {
-                  "sourceId": "jiuzhou-chunqiu-liubei",
-                  "locator": "裴注引《九州春秋》"
-                }
-              ]
-            }
-          ]
-        }
+        "periodUncertain": false
       },
       {
         "stageName": "赤壁後的劉備集團・荊州據地",
@@ -193,20 +110,7 @@
         "personId": null,
         "actualFactionId": "liubei-jingzhou-regime",
         "period": "建安十三年至十六年（208—211年）",
-        "periodUncertain": false,
-        "description": {
-          "paragraphs": [
-            {
-              "text": "長坂敗退後，劉備與孫權結盟，在赤壁共同擊退曹操。其後劉備攻取荊州南部四郡，獲推為荊州牧、治公安，逐步由依附者重新成為擁有地盤與軍政班底的獨立勢力領袖。",
-              "citations": [
-                {
-                  "sourceId": "sgz-liubei-main",
-                  "locator": "卷三十二・先主傳"
-                }
-              ]
-            }
-          ]
-        }
+        "periodUncertain": false
       },
       {
         "stageName": "益州牧政權",
@@ -214,20 +118,7 @@
         "personId": null,
         "actualFactionId": "liubei-yizhou-regime",
         "period": "建安十九年至二十四年（214—219年）",
-        "periodUncertain": false,
-        "description": {
-          "paragraphs": [
-            {
-              "text": "劉璋邀劉備入蜀對付張魯，雙方後來決裂。劉備攻取成都、領益州牧，任用原有部屬與劉璋舊臣，建立以益州為核心的政權；隨後與曹操爭奪漢中並取得勝利。",
-              "citations": [
-                {
-                  "sourceId": "sgz-liubei-main",
-                  "locator": "卷三十二・先主傳"
-                }
-              ]
-            }
-          ]
-        }
+        "periodUncertain": false
       },
       {
         "stageName": "漢中王政權",
@@ -235,20 +126,7 @@
         "personId": null,
         "actualFactionId": "hanzhong-kingdom",
         "period": "建安二十四年（219年）— 章武元年（221年）",
-        "periodUncertain": false,
-        "description": {
-          "paragraphs": [
-            {
-              "text": "群臣推舉劉備為漢中王、大司馬，以漢中、巴、蜀、廣漢、犍為為封國範圍。劉備仍以漢臣身分向漢獻帝上表，並交還左將軍、宜城亭侯印綬；不久關羽敗亡、荊州盡失，曹丕也取代東漢。",
-              "citations": [
-                {
-                  "sourceId": "sgz-liubei-main",
-                  "locator": "卷三十二・先主傳"
-                }
-              ]
-            }
-          ]
-        }
+        "periodUncertain": false
       },
       {
         "stageName": "漢・昭烈帝時期（後世稱蜀漢）",
@@ -256,24 +134,7 @@
         "personId": null,
         "actualFactionId": "shuhan-xianzhu",
         "period": "章武元年（221年）— 章武三年（223年）",
-        "periodUncertain": false,
-        "description": {
-          "paragraphs": [
-            {
-              "text": "劉備在成都即皇帝位，改元章武，正式以「漢」延續漢室國統；後世為區別而稱此政權為蜀漢。章武元年起東征孫吳，次年在猇亭、夷陵敗於陸遜，退至永安；章武三年託孤諸葛亮、李嚴後病逝。",
-              "citations": [
-                {
-                  "sourceId": "sgz-liubei-main",
-                  "locator": "卷三十二・先主傳"
-                },
-                {
-                  "sourceId": "sgz-zhuge-main",
-                  "locator": "卷三十五・諸葛亮傳"
-                }
-              ]
-            }
-          ]
-        }
+        "periodUncertain": false
       }
     ],
     "relatives": [
@@ -288,7 +149,8 @@
             "sourceId": "sgz-liubei-main",
             "locator": "卷三十二・先主傳"
           }
-        ]
+        ],
+        "hideAvatar": true
       },
       {
         "personName": "劉備之母（姓名不詳）",
@@ -301,7 +163,8 @@
             "sourceId": "sgz-liubei-main",
             "locator": "卷三十二・先主傳"
           }
-        ]
+        ],
+        "hideAvatar": true
       },
       {
         "personName": "麋夫人（姓名不詳）",
@@ -420,6 +283,42 @@
           {
             "sourceId": "sgz-shu-consorts",
             "locator": "卷三十四・先主子理傳"
+          }
+        ]
+      },
+      {
+        "personName": "關羽",
+        "personId": null,
+        "relation": "情同兄弟（正史稱「恩若兄弟」）",
+        "natureType": "史籍記載",
+        "note": "《三國志‧蜀書‧關羽傳》正文記載劉備與關羽、張飛「寢則同床，恩若兄弟」，情誼深厚。後世《三國演義》據民間傳說發展出「桃園結義」正式結拜儀式的情節，正史與《資治通鑑》均無結拜儀式的記載，不宜當成史實。",
+        "citations": [
+          {
+            "sourceId": "sgz-guanyu-main",
+            "note": "「先主與二人寢則同床，恩若兄弟」"
+          },
+          {
+            "sourceId": "sanguo-yanyi",
+            "locator": "第一回",
+            "note": "「桃園結義」情節出處"
+          }
+        ]
+      },
+      {
+        "personName": "張飛",
+        "personId": null,
+        "relation": "情同兄弟（正史稱「恩若兄弟」）",
+        "natureType": "史籍記載",
+        "note": "《三國志‧蜀書‧張飛傳》記載張飛年輕時與關羽一同事奉劉備，「羽年長數歲，飛兄事之」。同前，「桃園結義」正式結拜儀式為《三國演義》情節，正史無載。",
+        "citations": [
+          {
+            "sourceId": "sgz-zhangfei-main",
+            "note": "「羽年長數歲，飛兄事之」"
+          },
+          {
+            "sourceId": "sanguo-yanyi",
+            "locator": "第一回",
+            "note": "「桃園結義」情節出處"
           }
         ]
       }
