@@ -213,9 +213,52 @@ function renderPosthumousTitle(pt) {
   `;
 }
 
+/**
+ * 親屬排序：父母及以上尊親屬 → 兄弟姊妹 → 配偶 → 子女 → 孫輩，
+ * 同一層再依「男先女後」排，最後用長／次／三…等排行字樣當次要依據。
+ * 判斷全部靠 relation 欄位裡的關鍵字比對，抓不到關係就歸在最後一層、
+ * 並維持原本在資料裡的先後順序（穩定排序），不會亂跳。
+ */
+function relativeSortRank(relation) {
+  const rel = relation || "";
+  // 配偶類關鍵字放在最前面判斷。這是刻意的順序：像「夫人、劉禪生母，後追諡
+  // 昭烈皇后」這種描述，裡面的「母」其實是在講她是劉禪的母親，不是在講她是
+  // 主角自己的母親；如果先判斷父母那組關鍵字，會被這個「母」字誤觸發、
+  // 誤判成尊親屬。先比對配偶的專屬稱謂（夫人／皇后／王后／妃）就能避開這個陷阱。
+  if (/妻|夫人|皇后|王后|妃/.test(rel)) return { tier: 3, gender: 1 };
+  if (/夫/.test(rel)) return { tier: 3, gender: 0 };
+  if (/父|祖|叔|伯|舅/.test(rel)) return { tier: 1, gender: 0 };
+  if (/母|姑/.test(rel)) return { tier: 1, gender: 1 };
+  if (/兄|弟/.test(rel)) return { tier: 2, gender: 0 };
+  if (/姊|姐|妹/.test(rel)) return { tier: 2, gender: 1 };
+  if (/孫/.test(rel)) return { tier: 5, gender: /女/.test(rel) ? 1 : 0 };
+  if (/子|女|甥|姪/.test(rel)) return { tier: 4, gender: /女/.test(rel) && !/子/.test(rel) ? 1 : 0 };
+  return { tier: 6, gender: 1 };
+}
+
+function relativeBirthOrderRank(relation) {
+  const order = { 長: 0, 次: 1, 三: 2, 四: 3, 五: 4, 六: 5 };
+  for (const k in order) {
+    if ((relation || "").includes(k)) return order[k];
+  }
+  return 50; // 沒有明確排行字樣時給中間值，實際先後交給穩定排序保留原始順序
+}
+
+function sortRelatives(list) {
+  return list
+    .map((r, i) => ({ r, i, rank: relativeSortRank(r.relation), order: relativeBirthOrderRank(r.relation) }))
+    .sort((a, b) => {
+      if (a.rank.tier !== b.rank.tier) return a.rank.tier - b.rank.tier;
+      if (a.rank.gender !== b.rank.gender) return a.rank.gender - b.rank.gender;
+      if (a.order !== b.order) return a.order - b.order;
+      return a.i - b.i; // 排行也判斷不出來時，維持資料原本的順序
+    })
+    .map((x) => x.r);
+}
+
 function renderRelatives(list) {
   if (!list || !list.length) return "";
-  const rows = list
+  const rows = sortRelatives(list)
     .map((r) => {
       // hideAvatar：給不打算建檔、連預設灰色剪影都不想放的親屬用
       // （例如劉備父母這種只在史書上帶一筆、沒有三國時期事蹟的人物）
