@@ -970,34 +970,80 @@ a.rel-person-cell.is-link:hover span {
 
 /* ---------- 著作 ---------- */
 .work-entry {
-  padding: 16px 18px;
+  padding: 18px 20px;
   border-radius: var(--radius);
   background: var(--bg-2);
   border: 1px solid var(--line);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .work-title {
   font-family: var(--font-display);
   font-weight: 700;
+  font-size: 1.05rem;
   color: var(--accent);
-  margin: 0 0 4px;
+  margin: 0 0 10px;
 }
 
-.work-meta {
+/* 類型／現存狀況／歸屬狀態：改成一格一格的小標籤，不再黏成一整行 */
+.work-meta-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed var(--line);
+}
+
+.work-meta-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.85rem;
+}
+
+.work-meta-label {
   color: var(--text-faint);
-  font-size: 0.8rem;
-  margin-bottom: 8px;
+  font-size: 0.72rem;
+}
+
+.work-meta-value {
+  color: var(--text);
+}
+
+/* 收錄文獻／原文摘錄：各自獨立一個子區塊，跟簡介分開 */
+.work-subsection {
+  margin-top: 12px;
+}
+
+.work-subsection-label {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 6px;
 }
 
 .work-anthology {
   color: var(--text-muted);
-  font-size: 0.92rem;
-  margin: 0 0 8px;
+  font-size: 0.9rem;
+  margin: 0;
 }
 
 .work-entry .paraphrase-text {
-  font-size: 0.92rem;
+  font-size: 0.94rem;
+}
+
+.original-text-paragraph {
+  margin: 0 0 10px;
+}
+
+.original-text-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.work-entry .citations {
+  margin-top: 12px;
 }
 
 /* ---------- footer ---------- */
