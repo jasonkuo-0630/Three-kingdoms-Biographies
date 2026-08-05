@@ -103,6 +103,48 @@
       "name": "漢中王政權",
       "filterGroup": "qunxiong",
       "description": "劉備進位漢中王、大司馬，但仍以漢臣身分向漢獻帝上表的階段，尚未稱帝。"
+    },
+    {
+      "id": "ding-yuan-bingzhou-force",
+      "name": "丁原麾下・并州軍",
+      "filterGroup": "donghan",
+      "description": "東漢末年并州刺史丁原統領的地方軍事力量。丁原以張遼武力過人，召為從事並令其帶兵入京；此時丁原仍以東漢地方官身分活動，故歸入『東漢』。"
+    },
+    {
+      "id": "he-jin-han-court",
+      "name": "何進麾下・東漢中央軍",
+      "filterGroup": "donghan",
+      "description": "漢靈帝末年大將軍何進掌握的中央軍政體系。張遼由丁原遣兵入京後，直接奉何進之命赴河北募兵；史書未載張遼另受何進授予正式官名。"
+    },
+    {
+      "id": "dong-zhuo-regime",
+      "name": "董卓政權・挾持東漢朝廷",
+      "filterGroup": "qunxiong",
+      "description": "何進死後，董卓控制京師與東漢朝廷所形成的軍政集團。雖沿用漢廷名義，實際由董卓專政，本站歸入『群雄』。"
+    },
+    {
+      "id": "lu-bu-faction",
+      "name": "呂布勢力",
+      "filterGroup": "qunxiong",
+      "description": "董卓死後，呂布輾轉關中、河北與徐州所統率的軍事集團，至建安三年（198年）下邳敗亡。"
+    },
+    {
+      "id": "cao-cao-wei-kingdom",
+      "name": "曹操魏王國政權",
+      "filterGroup": "wei",
+      "description": "建安二十一年（216年）曹操受封魏王後，以鄴城為中心建立的魏王國體制；名義上仍為漢獻帝藩國，實際已是曹魏建國前身，故歸入『曹魏』。"
+    },
+    {
+      "id": "cao-pi-wei-kingdom",
+      "name": "曹丕魏王國政權",
+      "filterGroup": "wei",
+      "description": "延康元年（220年）曹操死後，曹丕繼承丞相、魏王至同年受禪稱帝前的短暫過渡政權。獨立設項可避免把曹丕即王位與正式建立曹魏混為一談。"
+    },
+    {
+      "id": "caowei-wendi",
+      "name": "曹魏・文帝政權",
+      "filterGroup": "wei",
+      "description": "黃初元年（220年）曹丕受禪稱帝、建立曹魏後，至黃初七年（226年）去世為止的政權階段。"
     }
   ]
 }
