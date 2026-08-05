@@ -387,10 +387,14 @@ function workMetaFieldHtml(label, value) {
 function workFullTextHtml(work) {
   if (!work.fullText || !work.fullText.length) return "";
   const paragraphs = work.fullText.map((p) => `<p class="original-text-paragraph">${escapeHtml(p)}</p>`).join("");
+  const versionNoteHtml = work.versionNote
+    ? `<p class="version-note"><span class="version-note-label">版本依據／異文說明</span>${escapeHtml(work.versionNote)}</p>`
+    : "";
   return `
     <details class="original-text-toggle">
       <summary>查看全文</summary>
       <blockquote class="original-text original-text--full">${paragraphs}</blockquote>
+      ${versionNoteHtml}
     </details>
   `;
 }
@@ -541,9 +545,9 @@ async function init() {
   try {
     [character, sources, factions, people] = await Promise.all([
       loadJson(`data/characters/${encodeURIComponent(id)}.json`),
-      loadJson("data/sources.json"),
-      loadJson("data/factions.json"),
-      loadJson("data/index.json"),
+      loadJsonCached("data/sources.json", "cache:sources"),
+      loadJsonCached("data/factions.json", "cache:factions"),
+      loadJsonCached("data/index.json", "cache:index"),
     ]);
   } catch (err) {
     console.error(`載入人物頁所需資料失敗（id=${id}）：`, err);
