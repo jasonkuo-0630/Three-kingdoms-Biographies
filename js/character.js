@@ -75,6 +75,7 @@ function renderHero(c) {
       </span>
       <div class="char-hero-info">
         <h1 class="char-hero-name">${escapeHtml(c.name)}</h1>
+        ${c.commonAlias ? `<p class="char-alias">又稱${escapeHtml(c.commonAlias)}</p>` : ""}
         ${c.summary ? `<p class="char-summary">${escapeHtml(c.summary)}</p>` : ""}
         <div class="meta-grid">${metaFields}</div>
       </div>
