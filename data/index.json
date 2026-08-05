@@ -4,7 +4,12 @@
     "published": true,
     "name": "趙雲",
     "courtesyName": "子龍",
-    "searchTerms": ["趙雲", "子龍", "zhao yun", "zilong"],
+    "searchTerms": [
+      "趙雲",
+      "子龍",
+      "zhao yun",
+      "zilong"
+    ],
     "avatar": "images/zhao_yun.png",
     "filterGroup": "shu"
   },
@@ -13,8 +18,30 @@
     "published": true,
     "name": "劉備",
     "courtesyName": "玄德",
-    "searchTerms": ["劉備", "玄德", "liu bei", "先主", "昭烈帝"],
+    "searchTerms": [
+      "劉備",
+      "玄德",
+      "liu bei",
+      "先主",
+      "昭烈帝"
+    ],
     "avatar": "images/liu_bei.png",
+    "filterGroup": "shu"
+  },
+  {
+    "id": "zhuge-liang",
+    "published": true,
+    "name": "諸葛亮",
+    "courtesyName": "孔明",
+    "searchTerms": [
+      "諸葛亮",
+      "孔明",
+      "臥龍",
+      "伏龍",
+      "武侯",
+      "zhuge liang"
+    ],
+    "avatar": "images/zhuge_liang.png",
     "filterGroup": "shu"
   }
 ]
