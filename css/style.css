@@ -231,8 +231,8 @@ summary:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 18px 10px 16px;
+  gap: 12px;
+  padding: 20px 10px 18px;
   border-radius: var(--radius);
   background: linear-gradient(180deg, var(--parchment), var(--parchment-2));
   box-shadow: var(--shadow);
@@ -248,8 +248,8 @@ summary:focus-visible {
 
 .avatar-ring {
   display: block;
-  width: 76px;
-  height: 76px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   padding: 3px;
   background: linear-gradient(160deg, var(--gold), #e6d19f);
@@ -280,20 +280,10 @@ summary:focus-visible {
   height: 46px;
 }
 
-.avatar-ring--spacer {
-  background: none;
-  visibility: hidden;
-}
-
-.faction-stage--continuation {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
 .char-card .char-name {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: var(--text-on-parchment);
 }
 
@@ -671,6 +661,14 @@ a.faction-stage.is-link:hover {
   background: rgba(169, 129, 47, 0.12);
 }
 
+/* 同一人物合併成一張卡片時，第二段之後的階段用一條淡虛線隔開，
+   視覺上表達「同一人的下一個階段」而不是另一則獨立紀錄 */
+.faction-stage-segment.has-divider {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--line);
+}
+
 /* 官職與爵位 */
 .rank-list {
   list-style: none;
@@ -737,6 +735,14 @@ a.faction-stage.is-link:hover {
   align-items: center;
   gap: 10px;
   white-space: nowrap;
+}
+
+/* 沒有頭像的親屬（例如不打算建檔的父母），姓名往右縮一點對齊有頭像的那些人 */
+.rel-person-cell--no-avatar {
+  display: inline-block;
+  padding-left: 44px;
+  font-weight: 700;
+  font-family: var(--font-display);
 }
 
 .rel-avatar {
