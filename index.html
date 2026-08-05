@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>三國人物誌</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <h1 class="site-title">三國人物誌</h1>
+      <p class="site-subtitle">史實與演義並陳的三國人物資料庫</p>
+    </header>
+
+    <div class="filter-bar">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <label class="sr-only" for="search-input">搜尋姓名或字號</label>
+        <input type="text" id="search-input" placeholder="搜尋姓名、字或其他稱呼…" autocomplete="off" />
+      </div>
+
+      <div class="faction-pills" id="faction-pills" role="group" aria-label="依勢力篩選"></div>
+
+      <button type="button" class="clear-btn" id="clear-btn">清除篩選</button>
+    </div>
+
+    <p class="result-count" id="result-count" aria-live="polite"></p>
+
+    <main class="card-grid" id="card-grid"></main>
+
+    <p class="empty-state" id="empty-state" hidden>沒有符合條件的人物，換個關鍵字或勢力篩選看看吧。</p>
+  </div>
+
+  <footer class="site-footer">內容含示範資料，僅供學習與興趣交流使用 · 各段內容皆標註來源</footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

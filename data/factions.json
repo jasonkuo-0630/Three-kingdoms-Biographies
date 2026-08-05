@@ -1,0 +1,108 @@
+{
+  "filterGroups": [
+    {
+      "id": "donghan",
+      "label": "東漢",
+      "order": 1
+    },
+    {
+      "id": "qunxiong",
+      "label": "群雄",
+      "order": 2
+    },
+    {
+      "id": "wei",
+      "label": "曹魏",
+      "order": 3
+    },
+    {
+      "id": "shu",
+      "label": "蜀漢",
+      "order": 4
+    },
+    {
+      "id": "wu",
+      "label": "孫吳",
+      "order": 5
+    },
+    {
+      "id": "jin",
+      "label": "西晉",
+      "order": 6
+    }
+  ],
+  "actualFactions": [
+    {
+      "id": "gongsun-zan-faction",
+      "name": "公孫瓚部",
+      "filterGroup": "qunxiong",
+      "description": "公孫瓚割據幽州的軍事集團，以白馬義從聞名，趙雲、劉備均曾短暫依附。"
+    },
+    {
+      "id": "liubei-group",
+      "name": "劉備集團（蜀漢建立前）",
+      "filterGroup": "qunxiong",
+      "description": "劉備稱帝建立蜀漢以前，輾轉依附公孫瓚、陶謙、曹操、袁紹、劉表等勢力期間所率領的部眾與班底。"
+    },
+    {
+      "id": "shuhan-xianzhu",
+      "name": "蜀漢・先主政權",
+      "filterGroup": "shu",
+      "description": "章武元年（221年）劉備稱帝建立蜀漢，至章武三年（223年）劉備去世為止的政權階段。"
+    },
+    {
+      "id": "shuhan-houzhu",
+      "name": "蜀漢・後主政權",
+      "filterGroup": "shu",
+      "description": "建興元年（223年）劉禪即位起，直至炎興元年（263年）蜀漢滅亡為止的政權階段。"
+    },
+    {
+      "id": "late-han-local-service",
+      "name": "東漢地方義兵與地方官",
+      "filterGroup": "donghan",
+      "description": "劉備早年隨校尉鄒靖討黃巾、歷任安喜尉等地方官職的階段，仍屬東漢地方軍政體系，尚未形成固定割據勢力。"
+    },
+    {
+      "id": "xuzhou-regime",
+      "name": "徐州政權（陶謙麾下／自領徐州）",
+      "filterGroup": "qunxiong",
+      "description": "劉備依附陶謙、其後受迎領有徐州的階段，是他第一次擁有自己地盤的時期。"
+    },
+    {
+      "id": "cao-cao-han-court",
+      "name": "曹操麾下（假東漢朝廷名義）",
+      "filterGroup": "qunxiong",
+      "description": "劉備失徐州後轉投曹操，曹操以東漢朝廷名義表其為豫州牧、左將軍的階段。"
+    },
+    {
+      "id": "yuan-shao-faction",
+      "name": "袁紹勢力",
+      "filterGroup": "qunxiong",
+      "description": "劉備二度背曹後北投袁紹，並數次於汝南一帶活動的階段。"
+    },
+    {
+      "id": "liu-biao-faction",
+      "name": "劉表麾下・荊州寄寓",
+      "filterGroup": "qunxiong",
+      "description": "劉備投奔荊州牧劉表、屯駐新野的寄寓階段，期間延攬徐庶、諸葛亮等人。"
+    },
+    {
+      "id": "liubei-jingzhou-regime",
+      "name": "劉備集團・荊州據地",
+      "filterGroup": "qunxiong",
+      "description": "赤壁之戰後，劉備與孫權結盟並攻取荊州南部四郡，重新成為擁有地盤的獨立勢力領袖。"
+    },
+    {
+      "id": "liubei-yizhou-regime",
+      "name": "劉備集團・益州牧政權",
+      "filterGroup": "qunxiong",
+      "description": "劉備入蜀、攻取成都並領益州牧，建立以益州為核心的政權階段。"
+    },
+    {
+      "id": "hanzhong-kingdom",
+      "name": "漢中王政權",
+      "filterGroup": "qunxiong",
+      "description": "劉備進位漢中王、大司馬，但仍以漢臣身分向漢獻帝上表的階段，尚未稱帝。"
+    }
+  ]
+}

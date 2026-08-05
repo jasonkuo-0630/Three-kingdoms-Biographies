@@ -1,0 +1,200 @@
+[
+  {
+    "id": "sgz-zhaoyun-main",
+    "kind": "三國志正文",
+    "title": "《三國志‧蜀書‧關張馬黃趙傳》趙雲本傳",
+    "note": "陳壽原文，卷三十六"
+  },
+  {
+    "id": "yun-biezhuan",
+    "kind": "裴松之注引",
+    "title": "《雲別傳》",
+    "note": "裴松之注《三國志‧趙雲傳》所引，原書已佚，僅存注文片段；作者及成書年代不詳，史料性質與正文不同，需獨立標註"
+  },
+  {
+    "id": "sgz-houzhu",
+    "kind": "三國志正文",
+    "title": "《三國志‧蜀書‧後主傳》",
+    "note": "用於確認景耀四年追諡的年月"
+  },
+  {
+    "id": "sgz-guanzhang-mahuang-zhao-appraisal",
+    "kind": "三國志正文",
+    "title": "《三國志‧蜀書‧關張馬黃趙傳》陳壽評語",
+    "note": "陳壽對關羽、張飛、馬超、黃忠、趙雲五人的卷末合評，非趙雲在世時的評價"
+  },
+  {
+    "id": "jihan-fuchen-zan",
+    "kind": "其他史籍",
+    "title": "楊戲《季漢輔臣贊》",
+    "note": "延熙四年（241年）成篇，陳壽編修《三國志》時收錄；此贊為趙雲、陳到二人合贊，非單獨評價趙雲"
+  },
+  {
+    "id": "sanguo-yanyi",
+    "kind": "演義原文",
+    "title": "《三國演義》",
+    "note": "羅貫中章回小說，明清通行本"
+  },
+  {
+    "id": "fan-sanguo-yanyi",
+    "kind": "後世文學",
+    "title": "周大荒《反三國演義》（又名《反三國志》）",
+    "note": "民國文人周大荒所著白話章回小說，1930年結集出版，非史籍"
+  },
+  {
+    "id": "sgz-liubei-main",
+    "kind": "三國志正文",
+    "title": "《三國志‧蜀書‧先主傳》",
+    "note": "陳壽原文，卷三十二"
+  },
+  {
+    "id": "sgz-liubei-appraisal",
+    "kind": "三國志正文",
+    "title": "《三國志‧蜀書‧先主傳》陳壽評語",
+    "note": "卷末評語，非劉備在世時的評價"
+  },
+  {
+    "id": "sgz-luxun-main",
+    "kind": "三國志正文",
+    "title": "《三國志‧吳書‧陸遜傳》",
+    "note": ""
+  },
+  {
+    "id": "sgz-zhuge-main",
+    "kind": "三國志正文",
+    "title": "《三國志‧蜀書‧諸葛亮傳》",
+    "note": ""
+  },
+  {
+    "id": "sgz-guanyu-main",
+    "kind": "三國志正文",
+    "title": "《三國志‧蜀書‧關羽傳》",
+    "note": ""
+  },
+  {
+    "id": "sgz-liufeng-main",
+    "kind": "三國志正文",
+    "title": "《三國志‧蜀書‧劉封傳》",
+    "note": ""
+  },
+  {
+    "id": "sgz-mizhu-main",
+    "kind": "三國志正文",
+    "title": "《三國志‧蜀書‧麋竺傳》",
+    "note": ""
+  },
+  {
+    "id": "sgz-pangtong-main",
+    "kind": "三國志正文",
+    "title": "《三國志‧蜀書‧龐統傳》",
+    "note": ""
+  },
+  {
+    "id": "sgz-shu-consorts",
+    "kind": "三國志正文",
+    "title": "《三國志‧蜀書‧二主妃子傳》",
+    "note": "先主甘皇后傳、先主穆皇后傳"
+  },
+  {
+    "id": "sgz-wendi-yiling",
+    "kind": "三國志正文",
+    "title": "《三國志‧魏書‧文帝紀》",
+    "note": ""
+  },
+  {
+    "id": "sgz-zhouyu-main",
+    "kind": "三國志正文",
+    "title": "《三國志‧吳書‧周瑜傳》",
+    "note": ""
+  },
+  {
+    "id": "jiuzhou-chunqiu-liubei",
+    "kind": "裴松之注引",
+    "title": "《九州春秋》",
+    "note": "「髀肉復生」之嘆即出於此"
+  },
+  {
+    "id": "weishu-liubei",
+    "kind": "裴松之注引",
+    "title": "《魏書》",
+    "note": "王沈《魏書》，裴注引用時常與陳壽正文立場有出入，需對照參看"
+  },
+  {
+    "id": "xiandi-chunqiu-liubei",
+    "kind": "裴松之注引",
+    "title": "《獻帝春秋》",
+    "note": ""
+  },
+  {
+    "id": "weilu-zhuge-visit",
+    "kind": "裴松之注引",
+    "title": "《魏略》",
+    "note": "關於徐庶薦諸葛亮/三顧經過的異說，裴松之並加案語評論其可信度"
+  },
+  {
+    "id": "dianlue-duyou",
+    "kind": "裴松之注引",
+    "title": "《典略》",
+    "note": ""
+  },
+  {
+    "id": "fuzi-liubei",
+    "kind": "裴松之注引",
+    "title": "《傅子》",
+    "note": "傅玄所著"
+  },
+  {
+    "id": "hanjin-chunqiu-sunfuren",
+    "kind": "裴松之注引",
+    "title": "《漢晉春秋》",
+    "note": "習鑿齒所著"
+  },
+  {
+    "id": "huayang-guozhi-thunder",
+    "kind": "裴松之注引",
+    "title": "《華陽國志》",
+    "note": "常璩所著地方志，此處為裴注所引段落"
+  },
+  {
+    "id": "shiyu-dilu",
+    "kind": "裴松之注引",
+    "title": "《世語》",
+    "note": "郭頒《世語》，「的盧馬」相關記載；裴松之並附孫盛評語一併考辨"
+  },
+  {
+    "id": "sunsheng-tuogu-comment",
+    "kind": "裴松之注引",
+    "title": "孫盛評語",
+    "note": "東晉史家孫盛的史評，由裴松之注引錄"
+  },
+  {
+    "id": "xizhaochi-liubei",
+    "kind": "裴松之注引",
+    "title": "習鑿齒評語",
+    "note": "東晉史家習鑿齒（《漢晉春秋》作者）的史評，由裴松之注引錄"
+  },
+  {
+    "id": "peisongzhi-yizhou-comment",
+    "kind": "裴松之注引",
+    "title": "裴松之案語（《三國志‧龐統傳》注）",
+    "note": "裴松之本人的考證評論，非另外徵引其他書目"
+  },
+  {
+    "id": "wulu-liubei-letter",
+    "kind": "裴松之注引",
+    "title": "《吳錄》",
+    "note": ""
+  },
+  {
+    "id": "wushu-yiling",
+    "kind": "裴松之注引",
+    "title": "《吳書》",
+    "note": "韋昭等東吳史官所撰，裴注引用"
+  },
+  {
+    "id": "zhuge-liang-ji-yizhao",
+    "kind": "裴松之注引",
+    "title": "《諸葛亮集》",
+    "note": "陳壽奉敕編集的諸葛亮遺文，裴注引其中劉備遺詔敕後主全文"
+  }
+]
