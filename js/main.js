@@ -16,7 +16,12 @@ function initFactionPills() {
   const container = document.getElementById("faction-pills");
   // 只顯示「目前人物資料裡實際用到」的分類（加上「全部」），
   // 避免一開始就列出一堆還沒有任何人物的空分類
-  const groupsInUse = new Set(state.people.map((p) => p.filterGroup).filter(Boolean));
+  const groupsInUse = new Set(
+    state.people
+      .filter((p) => p.published)
+      .map((p) => p.filterGroup)
+      .filter(Boolean)
+  );
 
   const options = [{ id: "all", label: "全部" }, ...state.filterGroups.filter((g) => groupsInUse.has(g.id))];
 
