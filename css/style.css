@@ -1042,6 +1042,25 @@ a.rel-person-cell.is-link:hover span {
   margin-bottom: 0;
 }
 
+.version-note {
+  margin: 10px 0 0;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  background: rgba(169, 129, 47, 0.06);
+  border: 1px dashed rgba(169, 129, 47, 0.35);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.version-note-label {
+  display: block;
+  font-size: 0.7rem;
+  color: #d9b463;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
 .work-entry .citations {
   margin-top: 12px;
 }
