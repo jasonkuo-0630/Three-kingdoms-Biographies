@@ -43,5 +43,21 @@
     ],
     "avatar": "images/zhuge_liang.png",
     "filterGroup": "shu"
+  },
+  {
+    "id": "ma-yunlu",
+    "published": true,
+    "name": "馬雲騄",
+    "searchTerms": ["馬雲騄", "ma yunlu", "反三國演義"],
+    "avatar": "images/ma_yunlu.png",
+    "filterGroup": "shu"
+  },
+  {
+    "id": "huang-furen",
+    "published": true,
+    "name": "黃夫人",
+    "searchTerms": ["黃夫人", "黃月英", "黃氏", "huang furen", "huang yueying"],
+    "avatar": null,
+    "filterGroup": "shu"
   }
 ]
