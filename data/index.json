@@ -48,7 +48,11 @@
     "id": "ma-yunlu",
     "published": true,
     "name": "馬雲騄",
-    "searchTerms": ["馬雲騄", "ma yunlu", "反三國演義"],
+    "searchTerms": [
+      "馬雲騄",
+      "ma yunlu",
+      "反三國演義"
+    ],
     "avatar": "images/ma_yunlu.png",
     "filterGroup": "shu"
   },
@@ -56,8 +60,42 @@
     "id": "huang-furen",
     "published": true,
     "name": "黃夫人",
-    "searchTerms": ["黃夫人", "黃月英", "黃氏", "huang furen", "huang yueying"],
+    "searchTerms": [
+      "黃夫人",
+      "黃月英",
+      "黃氏",
+      "huang furen",
+      "huang yueying"
+    ],
     "avatar": "images/huang_furen.png",
+    "filterGroup": "shu"
+  },
+  {
+    "id": "guan-yu",
+    "published": true,
+    "name": "關羽",
+    "courtesyName": "雲長",
+    "searchTerms": [
+      "關羽",
+      "雲長",
+      "關公",
+      "guan yu"
+    ],
+    "avatar": "images/guan_yu.png",
+    "filterGroup": "shu"
+  },
+  {
+    "id": "zhang-fei",
+    "published": true,
+    "name": "張飛",
+    "courtesyName": "益德",
+    "searchTerms": [
+      "張飛",
+      "益德",
+      "張翼德",
+      "zhang fei"
+    ],
+    "avatar": "images/zhang_fei.png",
     "filterGroup": "shu"
   }
 ]
