@@ -6,23 +6,23 @@
       "order": 1
     },
     {
-      "id": "qunxiong",
-      "label": "群雄",
-      "order": 2
-    },
-    {
       "id": "wei",
       "label": "曹魏",
-      "order": 3
+      "order": 2
     },
     {
       "id": "shu",
       "label": "蜀漢",
-      "order": 4
+      "order": 3
     },
     {
       "id": "wu",
       "label": "孫吳",
+      "order": 4
+    },
+    {
+      "id": "qunxiong",
+      "label": "群雄",
       "order": 5
     },
     {
