@@ -97,5 +97,18 @@
     ],
     "avatar": "images/zhang_fei.png",
     "filterGroup": "shu"
+  },
+  {
+    "id": "zhang-liao",
+    "published": true,
+    "name": "張遼",
+    "courtesyName": "文遠",
+    "searchTerms": [
+      "張遼",
+      "文遠",
+      "zhang liao"
+    ],
+    "avatar": "images/zhang_liao.png",
+    "filterGroup": "wei"
   }
 ]
