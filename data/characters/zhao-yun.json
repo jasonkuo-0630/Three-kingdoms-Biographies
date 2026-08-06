@@ -214,7 +214,8 @@
             {
               "sourceId": "yun-biezhuan"
             }
-          ]
+          ],
+          "paraphrase": "劉備稱讚趙雲渾身都是膽氣，肯定他在漢水之戰中展現出的非凡勇氣。"
         },
         {
           "evaluatorName": "劉禪",
@@ -226,7 +227,8 @@
             {
               "sourceId": "yun-biezhuan"
             }
-          ]
+          ],
+          "paraphrase": "劉禪表示趙雲追隨先帝時功績顯著，自己年幼歷經危難時也仰賴他的忠誠護衛，因此應為他議定諡號。"
         },
         {
           "evaluatorName": "姜維等（大將軍姜維及朝中眾臣）",
@@ -238,7 +240,8 @@
             {
               "sourceId": "yun-biezhuan"
             }
-          ]
+          ],
+          "paraphrase": "姜維等人肯定趙雲功績卓著、奉法忠君，又能厚待部下，使人願意為他效死，因此建議追諡為順平侯。"
         },
         {
           "evaluatorName": "楊戲",
@@ -250,7 +253,8 @@
             {
               "sourceId": "jihan-fuchen-zan"
             }
-          ]
+          ],
+          "paraphrase": "楊戲合稱趙雲厚重、陳到忠誠克己，二人都善於統率精選士卒，展現猛將的威烈。"
         }
       ],
       "later": [
@@ -264,7 +268,8 @@
             {
               "sourceId": "sgz-guanzhang-mahuang-zhao-appraisal"
             }
-          ]
+          ],
+          "paraphrase": "陳壽稱黃忠、趙雲強悍勇猛，是蜀漢倚重的爪牙之將，可比漢初輔佐高祖的名將。"
         }
       ]
     }
