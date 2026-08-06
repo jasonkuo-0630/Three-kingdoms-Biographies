@@ -81,45 +81,15 @@
         "personId": null,
         "actualFactionId": "yuan-shu-faction",
         "period": "興平元年至興平二年（194—195年）",
-        "periodUncertain": false,
-        "description": {
-          "paragraphs": [
-            {
-              "text": "孫策在孫堅死後先守喪、依舅吳景募兵，至興平元年才正式投袁術。袁術把孫堅舊部交還孫策，孫策受懷義校尉、折衝校尉與行殄寇將軍等名號，並奉命攻取廬江；袁術卻接連把曾許給孫策的九江、廬江太守職位授予他人，使孫策日益失望。",
-              "citations": [
-                {
-                  "sourceId": "sgz-sunce-main",
-                  "locator": "卷四十六・興平元年從袁術至攻陸康"
-                }
-              ]
-            }
-          ]
-        }
+        "periodUncertain": false
       },
       {
         "stageName": "孫策江東政權・渡江自主經略",
         "personName": "孫策",
-        "personId": "sun-ce",
+        "personId": null,
         "actualFactionId": "sun-ce-jiangdong-regime",
         "period": "興平二年至建安五年（195—200年）",
-        "periodUncertain": false,
-        "description": {
-          "paragraphs": [
-            {
-              "text": "興平二年孫策以協助吳景等平定江東為名，從袁術取得千餘兵渡江，沿途擴充到數千人並迅速擊敗劉繇。從此他已實際建立自己的江東軍政集團；建安二年袁術僭號後，孫策以書責備並斷絕往來，政治上正式脫離袁術。直到建安五年遇刺去世，孫策始終是此政權領袖。",
-              "citations": [
-                {
-                  "sourceId": "sgz-sunce-main",
-                  "locator": "卷四十六・請助吳景、渡江及與袁術絕"
-                },
-                {
-                  "sourceId": "zztj-kaoyi-sunjian-sunce",
-                  "locator": "孫策渡江年代考"
-                }
-              ]
-            }
-          ]
-        }
+        "periodUncertain": false
       }
     ],
     "relatives": [
