@@ -336,7 +336,8 @@
               "sourceId": "sgz-zhangfei-main",
               "locator": "卷三十六・張飛傳"
             }
-          ]
+          ],
+          "paraphrase": "程昱等人一致稱許關羽、張飛勇猛過人，具有在戰場上獨當一面的萬人敵之才。"
         },
         {
           "evaluatorName": "劉備",
@@ -349,7 +350,8 @@
               "sourceId": "sgz-zhangfei-main",
               "locator": "卷三十六・張飛傳"
             }
-          ]
+          ],
+          "paraphrase": "劉備警告張飛刑罰殺戮過重，又經常鞭打士卒卻仍讓他們留在身邊，這是在主動招致禍患。"
         },
         {
           "evaluatorName": "周瑜",
@@ -362,7 +364,8 @@
               "sourceId": "sgz-zhouyu-main",
               "locator": "卷五十四・周瑜傳"
             }
-          ]
+          ],
+          "paraphrase": "周瑜認為劉備本具梟雄之姿，又有關羽、張飛這樣的猛將輔佐，不可能長久屈居孫權之下。"
         }
       ],
       "later": [
@@ -377,7 +380,8 @@
               "sourceId": "sgz-guanzhang-mahuang-zhao-appraisal",
               "locator": "卷三十六卷末評語"
             }
-          ]
+          ],
+          "paraphrase": "陳壽肯定張飛勇冠當世、義釋嚴顏而有國士風範，也指出他性情暴烈、缺乏恩惠，最終因自身弱點招致敗亡。"
         },
         {
           "evaluatorName": "楊戲",
@@ -390,7 +394,8 @@
               "sourceId": "jihan-fuchen-zan",
               "locator": "關羽、張飛合贊"
             }
-          ]
+          ],
+          "paraphrase": "楊戲稱頌關羽、張飛勇烈輔主、共成大業，功名可比前代名將；又惋惜二人因輕率待人而遭奸人所害。"
         }
       ]
     }
