@@ -155,7 +155,7 @@
       },
       {
         "personName": "關平",
-        "personId": null,
+        "personId": "guan-ping",
         "relation": "子",
         "natureType": "史籍記載",
         "note": "正史明稱關平為關羽之子，建安二十四年與父親一同被孫權軍擒殺；《三國演義》第二十八回則虛構關平原為關定之子，後被關羽收為義子。",
@@ -172,7 +172,7 @@
       },
       {
         "personName": "關興",
-        "personId": null,
+        "personId": "guan-xing",
         "relation": "子",
         "natureType": "史籍記載",
         "note": "字安國，承襲爵位。年少已有聲譽，受諸葛亮器重，弱冠任侍中、中監軍，數年後去世。正史沒有他長期隨軍征戰或為父報仇的記載。",
