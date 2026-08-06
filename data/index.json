@@ -110,5 +110,19 @@
     ],
     "avatar": "images/zhang_liao.png",
     "filterGroup": "wei"
+  },
+  {
+    "id": "zhou-yu",
+    "published": true,
+    "name": "周瑜",
+    "courtesyName": "公瑾",
+    "searchTerms": [
+      "周瑜",
+      "公瑾",
+      "周郎",
+      "zhou yu"
+    ],
+    "avatar": "images/zhou_yu.png",
+    "filterGroup": "wu"
   }
 ]
