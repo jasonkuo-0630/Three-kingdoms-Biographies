@@ -149,8 +149,7 @@
             "sourceId": "sgz-liubei-main",
             "locator": "卷三十二・先主傳"
           }
-        ],
-        "hideAvatar": true
+        ]
       },
       {
         "personName": "劉備之母（姓名不詳）",
@@ -163,8 +162,7 @@
             "sourceId": "sgz-liubei-main",
             "locator": "卷三十二・先主傳"
           }
-        ],
-        "hideAvatar": true
+        ]
       },
       {
         "personName": "麋夫人（姓名不詳）",
@@ -291,36 +289,52 @@
         "personId": "guan-yu",
         "relation": "情同兄弟（正史稱「恩若兄弟」）",
         "natureType": "史籍記載",
-        "note": "《三國志‧蜀書‧關羽傳》正文記載劉備與關羽、張飛「寢則同床，恩若兄弟」，情誼深厚。後世《三國演義》據民間傳說發展出「桃園結義」正式結拜儀式的情節，正史與《資治通鑑》均無結拜儀式的記載，不宜當成史實。",
+        "note": "《三國志‧蜀書‧關羽傳》正文記載劉備與關羽、張飛「寢則同床，恩若兄弟」，情誼深厚。",
         "citations": [
           {
             "sourceId": "sgz-guanyu-main",
             "note": "「先主與二人寢則同床，恩若兄弟」"
-          },
-          {
-            "sourceId": "sanguo-yanyi",
-            "locator": "第一回",
-            "note": "「桃園結義」情節出處"
           }
-        ]
+        ],
+        "fictionalRelation": {
+          "label": "結拜二弟",
+          "natureType": "演義設定",
+          "citations": [
+            {
+              "sourceId": "sanguo-yanyi",
+              "locator": "第一回",
+              "note": "「桃園結義」情節"
+            }
+          ]
+        }
       },
       {
         "personName": "張飛",
         "personId": "zhang-fei",
         "relation": "情同兄弟（正史稱「恩若兄弟」）",
         "natureType": "史籍記載",
-        "note": "《三國志‧蜀書‧張飛傳》記載張飛年輕時與關羽一同事奉劉備，「羽年長數歲，飛兄事之」。同前，「桃園結義」正式結拜儀式為《三國演義》情節，正史無載。",
+        "note": "《三國志‧蜀書‧關羽傳》正文同樣以「二人」統稱關羽、張飛，記劉備與兩人「寢則同床，恩若兄弟」；《張飛傳》另記關羽年長張飛數歲，張飛以兄長之禮事奉關羽。",
         "citations": [
+          {
+            "sourceId": "sgz-guanyu-main",
+            "note": "「先主與二人寢則同床，恩若兄弟」"
+          },
           {
             "sourceId": "sgz-zhangfei-main",
             "note": "「羽年長數歲，飛兄事之」"
-          },
-          {
-            "sourceId": "sanguo-yanyi",
-            "locator": "第一回",
-            "note": "「桃園結義」情節出處"
           }
-        ]
+        ],
+        "fictionalRelation": {
+          "label": "結拜三弟",
+          "natureType": "演義設定",
+          "citations": [
+            {
+              "sourceId": "sanguo-yanyi",
+              "locator": "第一回",
+              "note": "「桃園結義」情節"
+            }
+          ]
+        }
       }
     ],
     "titlesAndRanks": [
