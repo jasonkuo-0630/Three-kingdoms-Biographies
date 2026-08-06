@@ -523,7 +523,8 @@
               "sourceId": "sgz-liubei-main",
               "locator": "卷三十二・先主傳"
             }
-          ]
+          ],
+          "paraphrase": "曹操認為當今天下真正的英雄只有劉備與自己，袁紹等人都不足以相提並論。"
         },
         {
           "evaluatorName": "袁紹",
@@ -536,7 +537,8 @@
               "sourceId": "xiandi-chunqiu-liubei",
               "locator": "裴注引《獻帝春秋》"
             }
-          ]
+          ],
+          "paraphrase": "袁紹稱劉備寬宏雅正、講求信義，徐州百姓願意擁戴他，正符合眾人的期望。"
         },
         {
           "evaluatorName": "周瑜",
@@ -549,7 +551,8 @@
               "sourceId": "sgz-zhouyu-main",
               "locator": "卷五十四・周瑜傳"
             }
-          ]
+          ],
+          "paraphrase": "周瑜認為劉備本具梟雄之姿，又有關羽、張飛這樣的猛將輔佐，不可能長久屈居孫權之下。"
         },
         {
           "evaluatorName": "傅幹",
@@ -562,7 +565,8 @@
               "sourceId": "fuzi-liubei",
               "locator": "裴注引《傅子》"
             }
-          ]
+          ],
+          "paraphrase": "傅幹認為劉備寬仁有氣度，能使部下為他效死，又有諸葛亮、關羽、張飛三位人傑輔佐，沒有不能成功的道理。"
         },
         {
           "evaluatorName": "陸遜",
@@ -575,7 +579,8 @@
               "sourceId": "sgz-luxun-main",
               "locator": "卷五十八・陸遜傳"
             }
-          ]
+          ],
+          "paraphrase": "陸遜指出劉備名聞天下，連曹操也曾忌憚他，是東吳必須慎重面對的強敵。"
         }
       ],
       "later": [
@@ -590,7 +595,8 @@
               "sourceId": "sgz-liubei-appraisal",
               "locator": "卷三十二・先主傳評曰"
             }
-          ]
+          ],
+          "paraphrase": "陳壽稱劉備剛毅寬厚、知人善任，具有漢高祖的風範；雖然權謀才略不及曹操，卻屢敗不屈，始終不肯居於人下。"
         },
         {
           "evaluatorName": "習鑿齒",
@@ -603,7 +609,8 @@
               "sourceId": "xizhaochi-liubei",
               "locator": "裴松之注所錄習鑿齒評語"
             }
-          ]
+          ],
+          "paraphrase": "習鑿齒認為劉備即使身處危難仍不失信義，又願與追隨者共患難，因此能深得人心並最終成就大業。"
         },
         {
           "evaluatorName": "孫盛",
@@ -616,7 +623,8 @@
               "sourceId": "sunsheng-tuogu-comment",
               "locator": "裴松之注《三國志・諸葛亮傳》引孫盛評"
             }
-          ]
+          ],
+          "paraphrase": "孫盛批評劉備以「如其不才，君可自取」託付諸葛亮並不妥當：若所託之人忠賢便不必如此叮囑，若並非忠賢，又不該替他開啟篡位的道路。"
         }
       ]
     }
