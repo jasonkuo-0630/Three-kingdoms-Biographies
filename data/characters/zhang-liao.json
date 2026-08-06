@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "dataStatus": "reviewed-draft",
-  "published": false,
+  "published": true,
   "lastReviewedAt": "2026-08-06",
   "id": "zhang-liao",
   "name": "張遼",
@@ -192,23 +192,6 @@
           {
             "sourceId": "sgz-zhangliao-main",
             "locator": "卷十七・張遼傳末"
-          }
-        ]
-      },
-      {
-        "personName": "關羽",
-        "personId": "guan-yu",
-        "relation": "友人、同僚；非血親",
-        "natureType": "正史關係／裴注補述",
-        "note": "建安五年關羽暫居曹營時，曹操命張遼探問其去留。正文保存關羽表明終將歸劉備、但會先立功報曹的對話；裴注引《傅子》又稱張遼一度擔心據實回報會使關羽被殺，最後以事君之義為重，並稱曹操如君父、關羽如兄弟。『兄弟』在此表示深厚交情，不是正式結拜記錄。",
-        "citations": [
-          {
-            "sourceId": "sgz-guanyu-main",
-            "locator": "卷三十六・建安五年關羽暫居曹營"
-          },
-          {
-            "sourceId": "fuzi-zhangliao-guanyu",
-            "locator": "裴注引《傅子》"
           }
         ]
       }
