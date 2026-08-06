@@ -72,7 +72,7 @@
       {
         "stageName": "孫策渡江創業・帶兵相助",
         "personName": "孫策",
-        "personId": null,
+        "personId": "sun-ce",
         "actualFactionId": "sun-ce-jiangdong-regime",
         "period": "興平年間（約194—195年，確切起訖不詳）",
         "periodUncertain": true
@@ -88,7 +88,7 @@
       {
         "stageName": "孫策江東政權・正式歸吳",
         "personName": "孫策",
-        "personId": null,
+        "personId": "sun-ce",
         "actualFactionId": "sun-ce-jiangdong-regime",
         "period": "建安三年（198年）— 建安五年（200年）孫策去世",
         "periodUncertain": false
@@ -96,7 +96,7 @@
       {
         "stageName": "孫權江東政權・稱帝前",
         "personName": "孫權",
-        "personId": null,
+        "personId": "sun-quan",
         "actualFactionId": "sun-quan-pre-imperial-regime",
         "period": "建安五年（200年）— 建安十五年（210年）病逝",
         "periodUncertain": false
@@ -157,7 +157,7 @@
       },
       {
         "personName": "孫策",
-        "personId": null,
+        "personId": "sun-ce",
         "relation": "情同兄弟（總角之好，骨肉之分）",
         "natureType": "史籍記載",
         "note": "《三國志》正文記兩人同年而「獨相友善」；裴松之注引《江表傳》載孫策稱與周瑜「總角之好，骨肉之分」，並記周瑜曾發眾及船糧相助。",
