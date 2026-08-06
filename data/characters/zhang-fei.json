@@ -105,40 +105,48 @@
       {
         "personName": "劉備",
         "personId": "liu-bei",
-        "relation": "情同兄弟；《三國演義》設定為結拜兄長",
-        "natureType": "正史關係／演義設定",
-        "note": "《三國志》只記劉備與關羽、張飛『寢則同床，恩若兄弟』，可確認關係親密，但無桃園結義或正式結拜儀式；三人焚香盟誓、依年齡排行為兄弟，是《三國演義》第一回的小說情節。",
+        "relation": "情同兄弟（正史稱「恩若兄弟」）",
+        "natureType": "史籍記載",
+        "note": "《三國志》正文記劉備與關羽、張飛「寢則同床，恩若兄弟」，可確認三人關係緊密。",
         "citations": [
           {
             "sourceId": "sgz-guanyu-main",
             "locator": "卷三十六・關羽傳開篇"
-          },
-          {
-            "sourceId": "sanguo-yanyi",
-            "locator": "第一回"
           }
-        ]
+        ],
+        "fictionalRelation": {
+          "label": "結拜大哥",
+          "natureType": "演義設定",
+          "citations": [
+            {
+              "sourceId": "sanguo-yanyi",
+              "locator": "第一回"
+            }
+          ]
+        }
       },
       {
         "personName": "關羽",
         "personId": "guan-yu",
-        "relation": "情同兄弟；《三國演義》設定為結拜兄長",
-        "natureType": "正史關係／演義設定",
-        "note": "《三國志》記劉備與關羽、張飛『寢則同床，恩若兄弟』，又記關羽年長張飛數歲、張飛以兄長之禮事奉關羽；正史無桃園結義或正式結拜儀式，結拜情節出自《三國演義》第一回。",
+        "relation": "情同兄弟（正史稱「恩若兄弟」）",
+        "natureType": "史籍記載",
+        "note": "《三國志‧張飛傳》記關羽年長張飛數歲，張飛以兄長之禮事奉關羽（「羽年長數歲，飛兄事之」）。",
         "citations": [
-          {
-            "sourceId": "sgz-guanyu-main",
-            "locator": "卷三十六・關羽傳開篇"
-          },
           {
             "sourceId": "sgz-zhangfei-main",
             "locator": "卷三十六・張飛傳開篇"
-          },
-          {
-            "sourceId": "sanguo-yanyi",
-            "locator": "第一回"
           }
-        ]
+        ],
+        "fictionalRelation": {
+          "label": "結拜二哥",
+          "natureType": "演義設定",
+          "citations": [
+            {
+              "sourceId": "sanguo-yanyi",
+              "locator": "第一回"
+            }
+          ]
+        }
       },
       {
         "personName": "夏侯氏（本名不詳）",
@@ -154,28 +162,34 @@
         ]
       },
       {
-        "personName": "敬哀皇后張氏",
+        "personName": "張氏（敬哀皇后）",
         "personId": null,
         "relation": "長女",
         "natureType": "史籍記載",
-        "note": "章武元年納為劉禪太子妃，建興元年立為皇后，建興十五年去世，葬南陵。",
+        "note": "章武元年納為劉禪太子妃，建興元年立為皇后，建興十五年去世，葬南陵。後世電玩作品或稱『張星彩』，但各作品所指對象不一致，不宜視為定論，詳見來源說明。",
         "citations": [
           {
             "sourceId": "sgz-shu-consorts",
             "locator": "卷三十四・後主敬哀皇后"
+          },
+          {
+            "sourceId": "zhang-xingcai-koei"
           }
         ]
       },
       {
-        "personName": "張皇后（本名不詳）",
+        "personName": "張氏（劉禪繼后）",
         "personId": null,
         "relation": "次女",
         "natureType": "史籍記載",
-        "note": "敬哀皇后之妹，建興十五年入宮為貴人，延熙元年立為皇后；蜀漢亡國後隨劉禪遷往洛陽。",
+        "note": "敬哀皇后之妹，建興十五年入宮為貴人，延熙元年立為皇后；蜀漢亡國後隨劉禪遷往洛陽。後世電玩作品或稱『張星彩』，但各作品所指對象不一致，不宜視為定論，詳見來源說明。",
         "citations": [
           {
             "sourceId": "sgz-shu-consorts",
             "locator": "卷三十四・後主張皇后"
+          },
+          {
+            "sourceId": "zhang-xingcai-koei"
           }
         ]
       },
