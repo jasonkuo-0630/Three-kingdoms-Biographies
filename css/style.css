@@ -386,11 +386,14 @@ summary:focus-visible {
 
 .meta-label {
   color: var(--text-faint);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .meta-value {
   color: var(--text);
   font-weight: 500;
+  min-width: 0;
 }
 
 /* ---------- 頁籤 ---------- */
@@ -739,24 +742,23 @@ a.faction-stage.is-link:hover {
 .rel-person-cell {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   white-space: nowrap;
 }
 
 /* 沒有頭像的親屬（例如不打算建檔的父母），姓名往右縮一點對齊有頭像的那些人 */
 .rel-person-cell--no-avatar {
   display: inline-block;
-  padding-left: 44px;
+  padding-left: 58px;
   font-weight: 700;
   font-family: var(--font-display);
+  font-size: 1.05rem;
 }
 
-.rel-avatar {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
+.rel-name-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
 }
 
 a.rel-person-cell.is-link:hover span {
@@ -783,6 +785,29 @@ a.rel-person-cell.is-link:hover span {
   color: #e0a89e;
   border-color: rgba(224, 168, 158, 0.4);
   background: rgba(224, 168, 158, 0.1);
+}
+
+/* 一筆親屬同時有「正史關係」與「演義設定」兩層時，分兩行顯示，
+   不要擠成一句話混在一起（例如桃園三兄弟、孫策與周瑜） */
+.rel-relation-line {
+  margin-bottom: 4px;
+}
+
+.rel-relation-line:last-child {
+  margin-bottom: 0;
+}
+
+.rel-relation-line--fiction {
+  color: var(--text-faint);
+  font-size: 0.88em;
+}
+
+td[data-label="資料性質"] > div {
+  margin-bottom: 6px;
+}
+
+td[data-label="資料性質"] > div:last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width: 640px) {
