@@ -234,6 +234,10 @@ function renderPosthumousTitle(pt) {
  */
 function relativeSortRank(relation) {
   const rel = relation || "";
+  // 姪輩稱呼（兄子＝姪子、弟子＝姪子、姪／侄）要先判斷，避免被底下的
+  // 「兄」「弟」關鍵字誤判成兄弟姊妹層——這跟「劉禪生母」被誤判成父母輩
+  // 是同一種陷阱，字面上剛好帶到「兄」「弟」但實際上是在講下一輩。
+  if (/兄子|弟子|姪|侄/.test(rel)) return { tier: 4, gender: /女/.test(rel) ? 1 : 0 };
   // 配偶類關鍵字放在最前面判斷。這是刻意的順序：像「夫人、劉禪生母，後追諡
   // 昭烈皇后」這種描述，裡面的「母」其實是在講她是劉禪的母親，不是在講她是
   // 主角自己的母親；如果先判斷父母那組關鍵字，會被這個「母」字誤觸發、
@@ -279,10 +283,10 @@ function renderRelatives(list) {
       if (r.hideAvatar) {
         personCell = `<span class="rel-person-cell rel-person-cell--no-avatar">${escapeHtml(r.personName)}</span>`;
       } else {
-        const ref = resolvePersonRef(r.personId, r.personName, r.avatar, "rel-avatar");
+        const ref = resolvePersonRef(r.personId, r.personName, r.avatar, "");
         personCell = personLinkOrPlain(
           ref.linkedId,
-          `${ref.avatarHtml}<span>${escapeHtml(ref.name)}</span>`,
+          `<span class="avatar-ring avatar-ring--sm">${ref.avatarHtml}</span><span class="rel-name-text">${escapeHtml(ref.name)}</span>`,
           "rel-person-cell"
         );
       }
@@ -290,15 +294,39 @@ function renderRelatives(list) {
       // 其餘（史籍記載、三國志正文記載、正文及裴注記載…等寫法皆可）都算 record。
       // 「傳說」是為了涵蓋像黃月英這種連《三國演義》本身都沒用過、
       // 純粹後世說書／電玩流傳開來的名字。
-      const isFictionType = /文學|虛構|戲曲|傳說/.test(r.natureType || "");
+      const isFictionType = (text) => /文學|虛構|戲曲|傳說|設定/.test(text || "");
+      const natureBadgeHtml = (text) =>
+        `<span class="nature-badge" data-nature="${isFictionType(text) ? "fiction" : "record"}">${escapeHtml(
+          text
+        )}</span>`;
+
+      // fictionalRelation：給「正史確有情誼記載，但演義另外安排了結拜／義兄弟這種
+      // 虛構設定」的關係用（例如桃園三兄弟、孫策與周瑜）。有這個欄位的話，
+      // 「關係」跟「資料性質」兩欄都會分兩行顯示：上面是正史關係，下面是演義設定，
+      // 不要把兩件事擠成一句話混在一起。
+      const relationHtml = r.fictionalRelation
+        ? `<div class="rel-relation-line">${escapeHtml(r.relation)}</div><div class="rel-relation-line rel-relation-line--fiction">${escapeHtml(
+            r.fictionalRelation.label
+          )}</div>`
+        : escapeHtml(r.relation);
+
+      const natureHtml = r.fictionalRelation
+        ? `<div>${natureBadgeHtml(r.natureType)}</div><div>${natureBadgeHtml(r.fictionalRelation.natureType)}</div>`
+        : natureBadgeHtml(r.natureType);
+
+      const supplementHtml = r.fictionalRelation
+        ? `${escapeHtml(r.note || "")}${citationsHtml(r.citations, sourceMap)}${citationsHtml(
+            r.fictionalRelation.citations,
+            sourceMap
+          )}`
+        : `${escapeHtml(r.note || "")}${citationsHtml(r.citations, sourceMap)}`;
+
       return `
         <tr>
           <td class="person-cell">${personCell}</td>
-          <td data-label="關係">${escapeHtml(r.relation)}</td>
-          <td data-label="資料性質"><span class="nature-badge" data-nature="${
-            isFictionType ? "fiction" : "record"
-          }">${escapeHtml(r.natureType)}</span></td>
-          <td data-label="補充">${escapeHtml(r.note || "")}${citationsHtml(r.citations, sourceMap)}</td>
+          <td data-label="關係">${relationHtml}</td>
+          <td data-label="資料性質">${natureHtml}</td>
+          <td data-label="補充">${supplementHtml}</td>
         </tr>
       `;
     })
