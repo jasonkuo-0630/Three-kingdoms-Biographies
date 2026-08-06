@@ -361,7 +361,8 @@
               "sourceId": "sgz-yuejin-main",
               "locator": "卷十七・樂進傳附建安十一年曹操上表"
             }
-          ]
+          ],
+          "paraphrase": "曹操稱樂進、于禁、張遼等人武力強盛、謀略周全、忠誠守節，無論衝鋒陷陣或統領軍隊都能勝任。"
         },
         {
           "evaluatorName": "曹操",
@@ -374,7 +375,8 @@
               "sourceId": "sgz-zhangliao-main",
               "locator": "卷十七・討陳蘭梅成"
             }
-          ]
+          ],
+          "paraphrase": "曹操肯定張遼冒險登上險峻的天柱山，成功斬滅陳蘭、梅成，建立平定賊寇之功。"
         },
         {
           "evaluatorName": "曹丕",
@@ -387,7 +389,8 @@
               "sourceId": "sgz-zhangliao-main",
               "locator": "卷十七・黃初二年"
             }
-          ]
+          ],
+          "paraphrase": "曹丕把張遼比作周代名將召虎，認為他的戰功足以與古代名將並論。"
         },
         {
           "evaluatorName": "孫權",
@@ -400,7 +403,8 @@
               "sourceId": "sgz-zhangliao-main",
               "locator": "卷十七・病中臨江"
             }
-          ]
+          ],
+          "paraphrase": "孫權警告諸將，即使張遼正在生病，仍然是難以抵擋的強敵，必須格外謹慎。"
         },
         {
           "evaluatorName": "曹丕",
@@ -413,7 +417,8 @@
               "sourceId": "sgz-zhangliao-main",
               "locator": "卷十七・黃初六年詔"
             }
-          ]
+          ],
+          "paraphrase": "曹丕高度稱頌張遼、李典在合肥以寡擊眾的戰功，認為此役前所未有，二人足稱國家的重要武力支柱。"
         }
       ],
       "later": [
@@ -428,20 +433,22 @@
               "sourceId": "sgz-weishu17-appraisal",
               "locator": "卷十七卷末評語"
             }
-          ]
+          ],
+          "paraphrase": "陳壽將張遼列為曹操麾下最重要的五位良將之一，並指出張遼與徐晃的事跡記載尤其完整詳備。"
         },
         {
           "evaluatorName": "孫盛",
           "evaluatorEra": "東晉史家",
           "context": "評曹操在合肥以張遼、李典出戰、樂進守城的密教與將領配合",
-          "textType": "白話轉述",
+          "textType": "古籍原文",
           "paraphrase": "孫盛認為合肥守軍孤弱無援，若只任勇將會好戰生患，只任怯將又難保軍心；曹操能按諸將特質分配出戰與守城任務，使事情發生後如合符契，是精妙的用兵安排。",
           "citations": [
             {
               "sourceId": "sunsheng-hefei-comment",
               "locator": "裴注附於卷十七合肥戰事後"
             }
-          ]
+          ],
+          "originalText": "至於合肥之守，縣弱無援，專任勇者則好戰生患，專任怯者則懼心難保。且彼眾我寡，必懷貪墯；以致命之兵，擊貪墯之卒，其勢必勝；勝而後守，守則必固。是以魏武推選方員，參以同異，為之密教，節宣其用；事至而應，若合符契，妙矣夫！"
         }
       ]
     }
