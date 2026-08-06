@@ -110,40 +110,48 @@
       {
         "personName": "劉備",
         "personId": "liu-bei",
-        "relation": "情同兄弟；《三國演義》設定為結拜兄長",
-        "natureType": "正史關係／演義設定",
-        "note": "《三國志》只記劉備與關羽、張飛『寢則同床，恩若兄弟』，可確認關係親密，但無桃園結義或正式結拜儀式；三人焚香盟誓、依年齡排行為兄弟，是《三國演義》第一回的小說情節。",
+        "relation": "情同兄弟（正史稱「恩若兄弟」）",
+        "natureType": "史籍記載",
+        "note": "《三國志》正文記劉備與關羽、張飛「寢則同床，恩若兄弟」，可確認三人關係緊密。",
         "citations": [
           {
             "sourceId": "sgz-guanyu-main",
             "locator": "卷三十六・關羽傳開篇"
-          },
-          {
-            "sourceId": "sanguo-yanyi",
-            "locator": "第一回"
           }
-        ]
+        ],
+        "fictionalRelation": {
+          "label": "結拜大哥",
+          "natureType": "演義設定",
+          "citations": [
+            {
+              "sourceId": "sanguo-yanyi",
+              "locator": "第一回"
+            }
+          ]
+        }
       },
       {
         "personName": "張飛",
         "personId": "zhang-fei",
-        "relation": "情同兄弟；《三國演義》設定為結拜弟弟",
-        "natureType": "正史關係／演義設定",
-        "note": "《三國志》記劉備與關羽、張飛『寢則同床，恩若兄弟』，又記關羽年長張飛數歲、張飛以兄長之禮事奉關羽；正史無桃園結義或正式結拜儀式，結拜情節出自《三國演義》第一回。",
+        "relation": "情同兄弟（正史稱「恩若兄弟」）",
+        "natureType": "史籍記載",
+        "note": "《三國志‧張飛傳》記關羽年長張飛數歲，張飛以兄長之禮事奉關羽。",
         "citations": [
-          {
-            "sourceId": "sgz-guanyu-main",
-            "locator": "卷三十六・關羽傳開篇"
-          },
           {
             "sourceId": "sgz-zhangfei-main",
             "locator": "卷三十六・張飛傳開篇"
-          },
-          {
-            "sourceId": "sanguo-yanyi",
-            "locator": "第一回"
           }
-        ]
+        ],
+        "fictionalRelation": {
+          "label": "結拜三弟",
+          "natureType": "演義設定",
+          "citations": [
+            {
+              "sourceId": "sanguo-yanyi",
+              "locator": "第一回"
+            }
+          ]
+        }
       },
       {
         "personName": "關平",
